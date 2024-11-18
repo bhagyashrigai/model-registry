@@ -61,7 +61,7 @@ jobs:
             nox --python=${{ matrix.python }}
           fi
       - name: Upload coverage report
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v5.0.2
         if: always() && matrix.session == 'tests'
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
